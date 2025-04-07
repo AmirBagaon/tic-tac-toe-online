@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Tic-Tac-Toe</h1>
+
+    <div id="name-input-section">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="player-name" placeholder="Your Name" maxlength="20">
+        <button id="join-button">Join Game</button>
+        <div id="join-error" class="error-message"></div>
+    </div>
+
+    <div id="game-section" style="display: none;">
+        <div id="player-info">
+            <span id="my-info">You: ? (?)</span> vs <span id="opponent-info">Opponent: ?</span>
+        </div>
+        <div id="status">Game Status: Connecting...</div>
+        <div id="board" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div id="chat-area">
+            <h3>Chat</h3>
+            <div id="chat-messages">
+                </div>
+            <div id="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type message...">
+                <button id="send-chat-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

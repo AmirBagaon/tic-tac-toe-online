@@ -1,0 +1,163 @@
+/* Includes styles from Step 2 and Step 7.1 */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#name-input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#name-input-section input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#name-input-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#name-input-section button:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    color: #dc3545; /* Red */
+    margin-top: 10px;
+    font-size: 0.9em;
+    min-height: 1em;
+}
+
+#game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-info {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#status {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 1.5em; /* Reserve space */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    background-color: #fff;
+    margin-bottom: 20px; /* Add margin below board */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.cell.x {
+    color: #007bff; /* Blue */
+}
+
+.cell.o {
+    color: #dc3545; /* Red */
+}
+
+#chat-area {
+    margin-top: 20px; /* Reduced margin */
+    width: 350px;
+    max-width: 90%; /* Ensure it fits smaller screens */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#chat-messages {
+    height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+ #chat-messages p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+ #chat-messages p strong {
+    margin-right: 5px;
+ }
+
+
+#chat-input-area {
+    display: flex;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#send-chat-button {
+    margin-left: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+ #send-chat-button:hover {
+    background-color: #0056b3;
+ }
